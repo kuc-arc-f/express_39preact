@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 console.log("env=", process.env.NODE_ENV)
-console.log("EXTERNAL_API_URL=", process.env.EXTERNAL_API_URL)
+//console.log("EXTERNAL_API_URL=", process.env.EXTERNAL_API_URL)
 //
 const errorObj = {ret: "NG", messase: "Error"};
 // route

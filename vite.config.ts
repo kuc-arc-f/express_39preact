@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
         lib: {
           entry: [
             './src/main.tsx',
+            './src/client/About.tsx',
           ],
           formats: ['es'],
           fileName: '[name]',
@@ -24,7 +25,7 @@ export default defineConfig(({ mode }) => {
     }
   } else {
     return {
-      plugins: [svelte()]
+      plugins: [preact()]
     }
   }
 })
