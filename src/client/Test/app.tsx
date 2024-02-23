@@ -5,7 +5,7 @@ export function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div class="container mx-auto my-2 px-8 bg-white">
       <div>
         <Head />
       </div>
@@ -17,7 +17,7 @@ export function App() {
         </button>
       </div>
       <hr />
-    </>
+    </div>
   )
 }
 /*
