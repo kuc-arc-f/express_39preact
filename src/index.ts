@@ -7,7 +7,7 @@ import 'dotenv/config'
 import Top from './pages/App';
 import About from './pages/About';
 import Test from './pages/Test';
-import TestShow from './pages/Test/TestShow';
+//import TestShow from './pages/Test/TestShow';
 //
 //import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
@@ -33,11 +33,7 @@ app.get('/about', (req: any, res: any) => {
   try { res.send(renderToString(About())); } catch (error) { res.sendStatus(500);}
 });
 app.get('/', (req: any, res: any) => {
-  try {
-    res.send(renderToString(Top()));
-  } catch (error) {
-    res.sendStatus(500);
-  }
+  try { res.send(renderToString(Top())); } catch (error) { res.sendStatus(500); }
 });
 
 //start

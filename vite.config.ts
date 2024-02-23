@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
           entry: [
             './src/main.tsx',
             './src/client/About.tsx',
+            './src/client/Test.tsx',
           ],
           formats: ['es'],
           fileName: '[name]',
