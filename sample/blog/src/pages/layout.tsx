@@ -25,7 +25,7 @@ export default function Page(props: any) {
         </div>
         {/* footer */}
         <footer className="bg-gray-400 text-white py-4 text-center fixed bottom-0 w-full">
-        Visit: https://github.com/kuc-arc-f/xxx
+        Visit: https://github.com/kuc-arc-f/express_39preact
       </footer>
       </body>
     </html>
