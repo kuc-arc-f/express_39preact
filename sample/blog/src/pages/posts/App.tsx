@@ -48,13 +48,20 @@ export default function Page(props: any) {
         </div>
         );
       })}
+      {/* paginate */}
+      <div className="paginate_wrap py-4">
+        <a href={`/?page=${beforePage}`}><button className="btn-outline-purple"> ＜ </button>
+        </a>
+        <a href={`/?page=${nextPage}`}><button className="btn-outline-purple"> ＞ </button>
+        </a>
+      </div>
     </div>        
     <div id="app"></div>
     {(process.env.NODE_ENV === "develop") ? (
         <script type="module" src="/static/Top.js"></script>
     ): (
         <script type="module" src="/public/static/Top.js"></script> 
-    )}    
+    )}
     <hr className="my-8" />
     <style>{`
     .post_list_wrap {min-height: 500px;}
@@ -64,10 +71,4 @@ export default function Page(props: any) {
   )
 }
 /*
-<div className="paginate_wrap py-4">
-  <a href={`/?page=${beforePage}`}><button className="btn-outline-purple"> ＜ </button>
-  </a>
-  <a href={`/?page=${nextPage}`}><button className="btn-outline-purple"> ＞ </button>
-  </a>
-</div>
 */
