@@ -16,10 +16,10 @@ export default function Page() {
         <div id="app"></div>
         {(process.env.NODE_ENV === "develop") ? (
             <>
-                <script type="module" src="/static/TestShow.js"></script>
+                <script type="module" src="/static/TestApiShow.js"></script>
             </>
         ): (
-            <script type="module" src="/public/static/TestShow.js"></script>
+            <script type="module" src="/public/static/TestApiShow.js"></script>
         )}        
     </html>
     );
