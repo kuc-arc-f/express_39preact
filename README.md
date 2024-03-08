@@ -6,7 +6,7 @@
 
  date    : 2024/02/20
 
- update : 2024/03/07 
+ update : 2024/03/07
 
 ***
 
@@ -14,19 +14,25 @@ Preact.js + express, sample
 
 ***
 ### build
-
-* front-build
+* dev-start
 ```
-npx vite build --mode client
-
-# watch-mode
-yarn watch
+yarn dev
 ```
 
 * express-build
 ```
 yarn build
 ```
+***
+### tailwindcss
+
+```
+npx tailwindcss -i ./src/main.css -o ./public/static/main.css
+
+#watch-mode
+npx tailwindcss -i ./src/main.css -o ./public/static/main.css --watch
+``` 
+
 ***
 ### blog
 
