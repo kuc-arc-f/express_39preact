@@ -1,11 +1,13 @@
 import { useState } from 'preact/hooks'
 import Head from '../../components/Head';
+import Footer from '../../components/Footer';
 //
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div class="container mx-auto my-2 px-8 bg-white">
+  <>
+    <div class="main_body_wrap container mx-auto my-2 px-8 bg-white">
       <Head />
       <div>
       </div>
@@ -18,6 +20,8 @@ export function App() {
       </div>
       <hr />
     </div>
+    <Footer />
+  </>
   )
 }
 /*
