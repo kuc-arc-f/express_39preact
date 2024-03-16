@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import Head from '../../components/Head';
+import Footer from '../../components/Footer';
 import HttpCommon from '../lib/HttpCommon';
 import CrudIndex from './CrudIndex';
 //
@@ -52,7 +53,8 @@ console.log("#getList");
   }
   //
   return (
-    <div class="container mx-auto my-2 px-8 bg-white">
+  <>
+    <div class="main_body_wrap container mx-auto my-2 px-8 bg-white">
       <div>
         <Head />
       </div>
@@ -89,6 +91,9 @@ console.log("#getList");
         );
       })}
     </div>
+    <Footer />
+  </>
+
   )
 }
 /*
