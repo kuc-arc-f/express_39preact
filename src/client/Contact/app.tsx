@@ -11,7 +11,7 @@ export function App() {
       <Head />
       <div>
       </div>
-      <h1 class="text-4xl font-bold">About!!</h1>
+      <h1 class="text-4xl font-bold">Contact!</h1>
       <hr />
       <div class="card">
         <button onClick={() => setCount((count) => count + 1)}>
