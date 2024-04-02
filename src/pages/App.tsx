@@ -20,15 +20,15 @@ export default function Page() {
             <hr />
             <h1 className="text-4xl font-bold">Hello!</h1>
             <div id="app"></div>
-            {(process.env.NODE_ENV === "develop") ? (
-                <script type="module" src="/static/main.js"></script>
-            ): (
-                <script type="module" src="/public/static/main.js"></script> 
-            )}             
           </div>
         </body>
     </html>
     );
 }
 /*
+{(process.env.NODE_ENV === "develop") ? (
+<script type="module" src="/static/main.js"></script>
+): (
+<script type="module" src="/public/static/main.js"></script> 
+)}             
 */

@@ -6,23 +6,21 @@
 
  date    : 2024/02/20
 
- update : 2024/03/16  
+ update : 2024/03/30  
 
 ***
 
-Preact.js + express, sample
+Preact.js + express, MPA sample 
 
 ***
 ### build
 * dev-start
 ```
+yarn build
+#
 yarn dev
 ```
 
-* express-build
-```
-yarn build
-```
 ***
 ### tailwindcss
 
