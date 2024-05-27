@@ -1,15 +1,13 @@
 
 import express from 'express';
-import { renderToString } from 'react-dom/server';
+import renderToString from 'preact-render-to-string'
 const app = express();
 import 'dotenv/config'
 //
-import Top from './pages/App';
-import About from './pages/About';
-import Test from './pages/Test';
-//import TestShow from './pages/Test/TestShow';
+import { App } from './pages/App';
+import {AboutApp} from './pages/About';
+import {TestApp} from './pages/Test';
 //
-//import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
 //
 app.use(express.json());
@@ -23,17 +21,24 @@ const errorObj = {ret: "NG", messase: "Error"};
 app.use('/api/common', commonRouter);
 
 //MPA
-app.get('/test/show', (req: any, res: any) => {
-  try { res.send(renderToString(TestShow())); } catch (error) { res.sendStatus(500); }
-});
 app.get('/test', (req: any, res: any) => {
-  try { res.send(renderToString(Test())); } catch (error) { res.sendStatus(500); }
+  try { 
+    const html = renderToString(<TestApp />);
+    res.status(200).set({ 'Content-Type': 'text/html' }).send(html)
+  } catch (error) { res.sendStatus(500); }
 });
 app.get('/about', (req: any, res: any) => {
-  try { res.send(renderToString(About())); } catch (error) { res.sendStatus(500);}
+  try {
+    const html = renderToString(<AboutApp />);
+    res.status(200).set({ 'Content-Type': 'text/html' }).send(html)
+  } catch (error) { res.sendStatus(500);}
 });
 app.get('/', (req: any, res: any) => {
-  try { res.send(renderToString(Top())); } catch (error) { res.sendStatus(500); }
+  try {
+     const html = renderToString(<App />);
+    //console.log(html);
+    res.status(200).set({ 'Content-Type': 'text/html' }).send(html)
+  } catch (error) { res.sendStatus(500); }
 });
 
 //start
